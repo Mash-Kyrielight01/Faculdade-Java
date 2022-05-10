@@ -49,7 +49,7 @@ public class App {
         }
         else if ( classe == 2)
         {
-            System.out.println("vc escolheu o guerreiro, que os caminhos da batalha te guiem pela sua jornada");
+            System.out.println("vc escolheu o Lutador, que os caminhos da batalha te guiem pela sua jornada");
         }
         else 
         {
