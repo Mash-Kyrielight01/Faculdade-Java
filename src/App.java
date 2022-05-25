@@ -1,16 +1,18 @@
 import java.util.Scanner;
+import javafx.application.Application;
+import javafx.stage.Stage;
 
 
-public class App {
+public class App extends Application {
     static Scanner input = new Scanner(System.in);
     public static void main(String[] args)  {
-          //aninhar if para fazer subclasses futuramente
+        launch(args);
+          
           //criar uma função para o personagem chamar uma ficha com seus dados 
           //implementar rolagem de dados pra jogar e os status
 
         //variaveis
         int classe;        
-        int subclasse;
         //int [] atributos
         //força
         //destreza
@@ -18,14 +20,12 @@ public class App {
         //inteligencia
         //sabedoria
         //carisma
-
+        Personagem Protagonista = new Personagem("Jack" , 50);
 
         //tutorial        
         System.out.println("ola aventureiro, seja bem vindo!");             
-        System.out.println("Por favor diga-nos o nome daquele(a) que ira desbravar este mundo, fazer grandes descobertas\nexplorar templos escondidos\ne conhecer coisas maravilhosas");
-        String nome = input.nextLine();
-        System.out.println("Seja bem vindo senhor(a)...." + nome +" ok, parece um nome interessante");
-        System.out.println("bem, agora um pouco de introdução do seu trabalho\nalgumas pessoas estao sumindo ao redor da floresta floresta\npor causa disso o chefe da guarda porém eles estavam preocupados com uma possivel ameaça de um dragão");
+        System.out.println("Por favor diga-nos Senhor jack, aquele(a) que ira desbravar este mundo, fazer grandes descobertas\nexplorar templos escondidos\ne conhecer coisas maravilhosas");
+        System.out.println("bem, agora um pouco de introdução do seu trabalho\nalgumas pessoas estao sumindo ao redor da floresta \npor causa disso o chefe da guarda  está contratando, pois eles estavam preocupados com uma possivel ameaça de um dragão");
         System.out.println("por causa disso, a guarda esta pagando aventureiros que se interessarem em algum dinheiro para resolverem esse caso");
         System.out.println("UMA RECOMPENSA PARA AQUELE QUE RESOLVER O PROBLEMA DO DESAPARECIMENTO DAS BOAS PESSOAS DESTA CIDADE, COM O PREMIO DE 50 MOEDAS DE OURO");
         //escolha da sua classe/estilo de jogo
@@ -41,7 +41,9 @@ public class App {
         if (classe == 1)
         {
             mago.mostrar();
-            subclasse = mago.escolher();
+            Protagonista.energia = 150;
+            System.out.println("como mago sua energia agora é de");
+            System.out.println("o seu arquirival é o Shinow, o Grande bruxo das trevas");
 
             //System.out.println("por favor escolha sua especialização");
             //System.out.println("Mago do Fogo");
@@ -50,11 +52,20 @@ public class App {
         else if ( classe == 2)
         {
             System.out.println("vc escolheu o Lutador, que os caminhos da batalha te guiem pela sua jornada");
+            Protagonista.energia = 200;
+            System.out.println("Seu rival e maior inimigo é o Sir. Filipe, o rei da guerra");
         }
         else 
         {
-            System.out.println("vc escolheu o ladrão1, que as sombras te protejam pois ao lado delas que vc ira para as batalhas\n");
+            System.out.println("vc escolheu o ladrão, que as sombras te protejam pois ao lado delas que vc ira para as batalhas\n");
+            Protagonista.energia = 100;
+
         }
+        
+    }
+    @Override
+    public void start(Stage arg0) throws Exception {
+        // TODO Auto-generated method stub
         
     }
 }
