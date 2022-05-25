@@ -53,7 +53,7 @@ public class App {
         }
         else 
         {
-            System.out.println("vc escolheu o ladino, que as sombras te protejam pois ao lado delas que vc ira para as batalhas\n");
+            System.out.println("vc escolheu o ladrão1, que as sombras te protejam pois ao lado delas que vc ira para as batalhas\n");
         }
         
     }
